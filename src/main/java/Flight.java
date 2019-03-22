@@ -57,4 +57,7 @@ public class Flight {
         this.flightCabin.remove(passenger1);
     }
 
+    public int getRemainingSeats() {
+        return this.availableSeats - this.flightCabin.size();
+    }
 }

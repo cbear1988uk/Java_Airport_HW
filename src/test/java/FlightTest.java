@@ -54,7 +54,6 @@ public class FlightTest {
     public void flightCanBookPassenger(){
         flight1.add(passenger1);
         assertEquals(1, flight1.passengerCount());
-        assertEquals(395, flight1.getAvailableSeats());
     }
 
     @Test
@@ -63,6 +62,10 @@ public class FlightTest {
         assertEquals(0, flight1.passengerCount());
     }
 
-
+    @Test
+    public void flightHasSeatRemainder(){
+        flight1.add(passenger1);
+        assertEquals(395, flight1.getRemainingSeats());
+    }
 
 }
