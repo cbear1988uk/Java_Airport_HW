@@ -13,7 +13,13 @@ public class FlightTest {
     public void setup(){
         flight = new Flight("FI431", "DEN", "GLA", "0145");
         passenger1 = new Passengers("Hugo Reyes", 2);
-        plane1 = new Plane(PlaneType.BOEING_777);    }
+        plane1 = new Plane(PlaneType.BOEING_777); 
+    }
+
+    @Test
+    public void doesFlightHaveAPlane(){
+        assertEquals(PlaneType.BOEING_777, flight.getPlane());
+    }
 
     @Test
     public void doesHaveFlightNumber(){
@@ -36,7 +42,14 @@ public class FlightTest {
     }
 
     @Test
-    public void canReturnNumberOfAvailableSeats(){
-        assertEquals();
+    public void flightStartsEmpty(){
+        assertEquals(0, flight.passengerCount());
     }
+
+    @Test
+    public void flightCanBookPassenger(){
+        flight.add(passenger1);
+        assertEquals(1, flight.passengerCount());
+    }
+
 }
