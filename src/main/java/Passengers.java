@@ -17,4 +17,5 @@ public class Passengers {
     public int hasBags() {
         return this.bags;
     }
+
 }
