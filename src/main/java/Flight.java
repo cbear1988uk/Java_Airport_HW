@@ -6,14 +6,17 @@ public class Flight {
     private String destination;
     private String departureLocation;
     private String departureTime;
+    private Integer availableSeats;
     private ArrayList<Passengers> flightCabin;
     private PlaneType plane;
 
-    public Flight(String flightNum, String destination, String departureLocation, String departureTime){
+    public Flight(PlaneType plane, String flightNum, String destination,
+                  String departureLocation, String departureTime, Integer availableSeats){
         this.flightNum = flightNum;
         this.destination = destination;
         this.departureLocation = departureLocation;
         this.departureTime = departureTime;
+        this.availableSeats = availableSeats;
         this.flightCabin = new ArrayList<Passengers>();
         this.plane = plane;
     }
@@ -34,6 +37,10 @@ public class Flight {
         return departureTime;
     }
 
+    public int getAvailableSeats(){
+        return this.availableSeats;
+    }
+
     public int passengerCount() {
         return this.flightCabin.size();
     }
@@ -45,4 +52,9 @@ public class Flight {
     public PlaneType getPlane() {
         return plane;
     }
+
+    public void remove(Passengers passenger1) {
+        this.flightCabin.remove(passenger1);
+    }
+
 }

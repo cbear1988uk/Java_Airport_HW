@@ -9,7 +9,7 @@ public class PlaneTest {
 
     @Before
     public void setup(){
-        plane = new Plane(PlaneType.BOEING_777);
+        plane = new Plane(PlaneType.BOEING_777, 396, 1000);
     }
 
     @Test
@@ -18,12 +18,12 @@ public class PlaneTest {
     }
 
     @Test
-    public void canGetCapacityFromEnum(){
-        assertEquals(396, plane.getCapacityFromEnum());
+    public void planeHasCapacity(){
+        assertEquals(396, plane.getCapacity());
     }
 
     @Test
-    public void canGetMaxWeightFromEnum(){
-        assertEquals(351500, plane.getMaxWeightFromEnum());
+    public void planeHasMaxWeight(){
+        assertEquals(1000, plane.getMaxWeight());
     }
 }
