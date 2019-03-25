@@ -1,6 +1,10 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
@@ -18,6 +22,7 @@ public class FlightTest {
         passenger2 = new Passengers("James Ford", 1);
         plane1 = new Plane(PlaneType.BOEING_777, 396, 1000);
         seat = new Seats();
+//        Date date = new GregorianCalendar(2019, Calendar.NOVEMBER, 12).getTime();
     }
 
     @Test
