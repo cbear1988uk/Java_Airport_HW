@@ -14,8 +14,8 @@ public class ManagerTest {
         passenger = new Passengers("Frank Lapidus", 2);
     }
 
-    @Test
-    public void passengerHasReservedBaggageWeight(){
-        assertEquals(20, flightManager.maxBaggageWeight());
-    }
+//    @Test
+//    public void passengerHasMaxBaggageWeight(){
+//        assertEquals(20, flightManager.maxBaggageWeight());
+//    }
 }
